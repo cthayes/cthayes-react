@@ -1,6 +1,6 @@
 # cthayes-react
 
-This is the source code http://cthayes.net, built using Facebook's React framework.
+This is the source code for http://cthayes.net, built using Facebook's React framework.
 
 ## Prereqs
 
@@ -18,15 +18,6 @@ In a terminal do the following:
 ```
 cd cthayes-react
 npm install
-npx gulp
+npm run build
 open dist/index.html
 ```
-
-## npm < 5.2?
-
-If you have npm < 5.2 you'll need to install gulp globally:
-```
-npm install -g gulp
-```
-
-Then run it without the npx prefix. 
