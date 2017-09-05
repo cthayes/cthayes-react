@@ -3,7 +3,7 @@ var browserify = require('browserify');
 var babelify = require('babelify');
 var source = require('vinyl-source-stream');
 var concat = require('gulp-concat');
-let clean = require('rimraf');
+let rimraf = require('rimraf');
 let mkdir = require('make-dir');
 let uglify = require('gulp-uglify');
 
@@ -46,6 +46,6 @@ gulp.task('copy', ['clean'], function() {
 });
 
 gulp.task('clean', function() {
-	clean.sync('./dist');
+	rimraf.sync('./dist');
 	mkdir('./dist');
 });
