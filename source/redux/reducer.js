@@ -1,14 +1,21 @@
 let actions = require('./actions');
 let experiences = require('../data/experiences');
-let education = require('../data/education');
 
 const initialState = {
 	experiences: experiences,
-	educations: education
+	educations: []
 }
 
 function reducer(state = initialState, action) {
-	return state;
+	let newState = Object.assign({}, state)
+	
+	switch(action.type) {
+		case 'ADD_EDUCATION':
+			newState.educations = action.data
+			break;
+		default:
+	}
+	return newState;
 }
 
 module.exports = reducer;

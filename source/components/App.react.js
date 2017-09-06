@@ -3,9 +3,9 @@ let React = require('react');
 let Intro = require('./Intro.react');
 let About = require('./About.react');
 let Experience = require('./Experience.react');
-let Education = require('./Education.react');
 let Footer = require('./Footer.react');
 
+import Education from './Education.react'
 
 import {BrowserRouter as Router, Route, NavLink} from 'react-router-dom'
 
