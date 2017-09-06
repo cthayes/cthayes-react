@@ -1,4 +1,4 @@
-let actions = require('./actions');
+import constants from './constants'
 let experiences = require('../data/experiences');
 
 const initialState = {
@@ -10,7 +10,7 @@ function reducer(state = initialState, action) {
 	let newState = Object.assign({}, state)
 	
 	switch(action.type) {
-		case 'ADD_EDUCATION':
+		case constants.ADD_EDUCATION:
 			newState.educations = action.data
 			break;
 		default:

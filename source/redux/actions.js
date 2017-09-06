@@ -1,10 +1,17 @@
-module.exports = {
-	ADD_EXPERIENCE: {
-		type: 'ADD_EXPERIENCE',
-		data: null
-	},
-	ADD_EDUCATION: {
-		type: 'ADD_EDUCATION',
-		data: null
-	}
+import constants from './constants'
+
+let createActions = function(dispatch) {
+  let addEducation = function(data) {   	
+	  dispatch({
+		type: constants.ADD_EDUCATION,
+		data: data
+	})
+
+  };
+
+  return {
+    addEducation
+  };
 }
+
+export default createActions

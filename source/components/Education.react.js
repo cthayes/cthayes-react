@@ -1,30 +1,18 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import createActions from '../redux/actions'
 
 var Section = require('./Education.Section.react');
 
 
-let createHandlers = function(dispatch) {
-  let onData = function(data) {   	
-	  dispatch({
-		type: 'ADD_EDUCATION', 
-		data: data
-	})
-
-  };
-
-  return {
-    onData
-  };
-}
-
 class Education extends React.Component {s
 	constructor(props) {
 	    super(props);
-		this.handlers = createHandlers(this.props.dispatch);
+		this.actions = createActions(this.props.dispatch);
 	}
   
 	componentDidMount() {
+		// If we already have the data don't make another request
 		if (this.context.store.getState().educations.length > 0) {
 			return
 		}
@@ -32,7 +20,7 @@ class Education extends React.Component {s
 		let that = this;
 		fetch('http://localhost:8080/education')
 			.then(response => response.json() )
-			.then(array => that.handlers.onData(array) )
+			.then(array => that.actions.addEducation(array) )
 			.catch(err => console.log(err) );			
 	}
 		
@@ -56,4 +44,4 @@ Education.contextTypes = {
 }
 
 
-export default connect()(Education);
+export default connect()(Education)
