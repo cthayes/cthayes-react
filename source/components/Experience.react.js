@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux';
 import createActions from '../redux/actions'
 
-var Section = require('./Experience.Section.react.js');
+import Section from './Experience.Section.react.js'
 
 class Experience extends React.Component {
 	constructor(props) {

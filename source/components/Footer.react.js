@@ -1,4 +1,4 @@
-let React = require('react');
+import React from 'react'
 
 class Footer extends React.Component {
 	render() { return (
@@ -8,4 +8,4 @@ class Footer extends React.Component {
 	)}
 }
 
-module.exports = Footer;
+export default Footer

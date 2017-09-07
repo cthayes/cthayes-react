@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react'
 
 class Section extends React.Component {
 	render() {return(
@@ -17,4 +17,4 @@ class Section extends React.Component {
 	)}
 }
 
-module.exports = Section;
+export default Section

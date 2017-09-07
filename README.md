@@ -20,6 +20,11 @@ In a terminal do the following:
 ```
 cd cthayes-react
 npm install
+```
+
+## Usage
+
+```
 npm run build
 open http://localhost:3000/ && npm start
 ```

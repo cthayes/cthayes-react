@@ -20,4 +20,4 @@ function reducer(state = initialState, action) {
 	return newState;
 }
 
-module.exports = reducer;
+export default reducer;

@@ -1,5 +1,6 @@
-var React = require('react');
-module.exports = React.createClass({
+import React from 'react'
+
+class About extends React.Component {
 	render() { return (
 		<div className="section about" id="about-section">
 			<div className="content-box">
@@ -31,4 +32,6 @@ module.exports = React.createClass({
 		</div>
 
 	)}
-});
+};
+
+export default About

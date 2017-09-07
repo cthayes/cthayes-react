@@ -2,10 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux';
 import createActions from '../redux/actions'
 
-var Section = require('./Education.Section.react');
+import Section from './Education.Section.react'
 
-
-class Education extends React.Component {s
+class Education extends React.Component {
 	constructor(props) {
 	    super(props);
 		this.actions = createActions(this.props.dispatch);

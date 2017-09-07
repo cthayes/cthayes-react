@@ -1,15 +1,14 @@
-let React = require('react');
-
-let Intro = require('./Intro.react');
-let About = require('./About.react');
-let Footer = require('./Footer.react');
-
-import Experience from './Experience.react'
-import Education from './Education.react'
-
+import React from 'react'
 import {BrowserRouter as Router, Route, NavLink} from 'react-router-dom'
 
-module.exports = React.createClass({
+import Intro from './Intro.react'
+import About from './About.react'
+import Experience from './Experience.react'
+import Education from './Education.react'
+import Footer from './Footer.react'
+
+
+class App extends React.Component {
 	render() {
 		return(
 			<div className="page" id="home-section">		
@@ -52,4 +51,6 @@ module.exports = React.createClass({
 				</div>
 			</div>
 		)}
-});
+};
+
+export default App
