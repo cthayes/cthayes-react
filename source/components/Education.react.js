@@ -17,10 +17,9 @@ class Education extends React.Component {s
 			return
 		}
 		
-		let that = this;
 		fetch('http://localhost:8080/education')
 			.then(response => response.json() )
-			.then(array => that.actions.addEducation(array) )
+			.then(array => this.actions.addEducation(array) )
 			.catch(err => console.log(err) );			
 	}
 		

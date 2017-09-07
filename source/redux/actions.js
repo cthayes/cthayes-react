@@ -8,9 +8,18 @@ let createActions = function(dispatch) {
 	})
 
   };
+  
+  let addExperiences = function(data) {   	
+	  dispatch({
+		type: constants.ADD_EXPERIENCES,
+		data: data
+	})
+
+  };
 
   return {
-    addEducation
+    addEducation,
+    addExperiences
   };
 }
 
