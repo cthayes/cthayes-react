@@ -4,8 +4,8 @@
   "description": "cthayes implementation in react",
   "main": "source/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp"
+    "test": "NODE_ENV=test jest",
+    "build": "NODE_ENV=production gulp"
   },
   "author": "Christopher Hayes",
   "license": "ISC",
@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-jest": "^21.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
@@ -29,8 +30,38 @@
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-uglify": "^3.0.0",
+    "jest-cli": "^21.0.1",
     "make-dir": "^1.0.0",
     "rimraf": "^2.6.1",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "babel": {
+    "env": {
+      "production": {
+        "presets": [
+          "es2015",
+          "react",
+          "stage-2"
+        ]
+      },
+      "test": {
+        "presets": [
+          "es2015",
+          "react",
+          "stage-2"
+        ],
+        "plugins": [
+          "transform-es2015-modules-commonjs"
+        ]
+      }
+    }
+  },
+  "jest": {
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest"
+    },
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react"
+    ]
   }
 }

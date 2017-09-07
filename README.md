@@ -28,3 +28,9 @@ npm install
 npm run build
 open http://localhost:3000/ && npm start
 ```
+
+## Testing
+Run the unit test suit:
+```
+npm test
+```

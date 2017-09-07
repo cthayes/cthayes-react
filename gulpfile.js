@@ -34,7 +34,7 @@ gulp.task('scripts', ['clean'], function() {
 
 gulp.task('react', ['clean'], function () {
   return browserify('./source/app.js')
-        .transform(babelify, {presets: ["es2015", "react", "stage-2"]})
+        .transform(babelify)
         .bundle()
         .pipe(source('cthayes-net.js'))
         .pipe(gulp.dest('./dist/'));
